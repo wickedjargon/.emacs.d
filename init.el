@@ -1363,6 +1363,7 @@ With a prefix arg INVALIDATE-CACHE, invalidates the cache first."
 
 ;; allow copy/paste when in terminal
 (use-package xclip :straight t :ensure t :defer t
+  :if (memq system-type '(darwin gnu/linux))
   :hook
   (after-init . xclip-mode))
 
